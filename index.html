@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vegas Edge - VegasAdvantage Intelligence</title>
+    <title>Vegas Edge Matcher - Game and Casino Recommendations</title>
     <meta
       name="description"
-      content="A hackathon prototype that turns public VegasAdvantage casino, table game, poker room, and sportsbook data into a responsible Las Vegas gambling intelligence dashboard."
+      content="Match risk tolerance, income, skill level, and play style to public VegasAdvantage-derived game and casino recommendations."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -19,173 +19,132 @@
         <span class="brand-name">Vegas Edge</span>
       </div>
       <nav class="top-nav" aria-label="Sections">
-        <a href="#dashboard">Dashboard</a>
-        <a href="recommend.html">Matcher</a>
+        <a href="index.html" aria-current="page">Matcher</a>
         <a href="game-profiles.html">Game Profiles</a>
-        <a href="#explore">Explore</a>
-        <a href="#route">Run Sheet</a>
-        <a href="#sources">Sources</a>
       </nav>
     </header>
 
     <main id="main-content">
-      <section class="hero" id="dashboard" aria-labelledby="hero-title">
-        <picture class="hero-media">
-          <img src="assets/vegas-edge-hero.png" alt="Casino analytics dashboard concept with Las Vegas-inspired lights">
-        </picture>
-        <div class="hero-shade"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Public VegasAdvantage snapshot</p>
-          <h1 id="hero-title">Casino intelligence for value-focused Las Vegas planning</h1>
-          <p class="hero-copy">
-            Public survey summaries, poker room notes, and sportsbook operator coverage are normalized into a
-            searchable hackathon dashboard with visible attribution and risk flags.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#explore">Explore records</a>
-            <a class="button secondary" href="#sources">Review data policy</a>
+      <section class="matcher-hero" aria-labelledby="matcher-title">
+        <div class="section-inner matcher-hero-inner">
+          <div>
+            <p class="eyebrow">Recommendation Lab</p>
+            <h1 id="matcher-title">Find the best games and casinos for your play profile</h1>
+            <p class="hero-copy">
+              Vegas Edge turns public VegasAdvantage-derived game and venue signals into a focused
+              recommendation workflow for visitors trying to match budget, skill, risk, and session goals.
+            </p>
+          </div>
+          <div class="snapshot-card">
+            <strong>Data boundary</strong>
+            <p>
+              Results are planning suggestions from public summaries. They are not betting advice, live odds,
+              expected-value guarantees, or instructions to gamble.
+            </p>
           </div>
         </div>
-        <div class="hero-strip" aria-label="Data scope">
-          <span>21+ information only</span>
-          <span>No wagering or odds placement</span>
-          <span>Backlinks included</span>
-        </div>
       </section>
 
-      <section class="status-band" aria-label="Market summary">
-        <div class="section-inner metrics-grid" id="metrics-grid"></div>
-      </section>
-
-      <section class="section-block" id="explore" aria-labelledby="explore-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Explorer</p>
-              <h2 id="explore-title">Venue and category signals</h2>
+      <section class="section-block" aria-labelledby="profile-title">
+        <div class="section-inner matcher-layout">
+          <form class="recommend-form" id="recommend-form">
+            <div class="section-heading compact-heading">
+              <div>
+                <p class="eyebrow">Inputs</p>
+                <h2 id="profile-title">Player profile</h2>
+              </div>
             </div>
-            <div class="snapshot-pill" id="snapshot-pill"></div>
-          </div>
 
-          <div class="toolbar" aria-label="Filters">
-            <label class="search-control">
-              <span>Search</span>
-              <input type="search" id="search-input" placeholder="Casino, game, operator">
-            </label>
             <label class="select-control">
-              <span>Region</span>
-              <select id="region-select">
-                <option value="all">All regions</option>
-                <option value="Strip">Strip</option>
-                <option value="Downtown">Downtown</option>
-                <option value="Locals">Locals</option>
-                <option value="Off-Strip">Off-Strip</option>
+              <span>Risk Tolerance</span>
+              <select id="risk-tolerance">
+                <option value="1">Very low</option>
+                <option value="2">Low</option>
+                <option value="3" selected>Moderate</option>
+                <option value="4">High</option>
+                <option value="5">Very high</option>
               </select>
             </label>
-            <div class="segment-control" role="group" aria-label="Category">
-              <button type="button" class="segment is-active" data-category="all">All</button>
-              <button type="button" class="segment" data-category="blackjack">Blackjack</button>
-              <button type="button" class="segment" data-category="table">Tables</button>
-              <button type="button" class="segment" data-category="poker">Poker</button>
-              <button type="button" class="segment" data-category="sportsbook">Sportsbooks</button>
-              <button type="button" class="segment" data-category="low-limit">Low limit</button>
-            </div>
-          </div>
 
-          <div class="content-grid">
-            <div class="record-list" id="record-list" aria-live="polite"></div>
-            <aside class="insight-panel" aria-labelledby="insights-title">
-              <h3 id="insights-title">Market watch</h3>
-              <div id="market-signals"></div>
-              <div class="data-alerts" id="data-alerts"></div>
-            </aside>
-          </div>
+            <label class="select-control">
+              <span>Income</span>
+              <select id="income">
+                <option value="1">Under $50k</option>
+                <option value="2" selected>$50k-$100k</option>
+                <option value="3">$100k-$200k</option>
+                <option value="4">$200k+</option>
+              </select>
+            </label>
+
+            <label class="select-control">
+              <span>Skill Level</span>
+              <select id="skill-level">
+                <option value="1">Beginner</option>
+                <option value="2">Casual</option>
+                <option value="3" selected>Intermediate</option>
+                <option value="4">Advanced</option>
+                <option value="5">Expert</option>
+              </select>
+            </label>
+
+            <label class="range-control">
+              <span class="range-title">Playing for the Longest Time vs Best Payout</span>
+              <input type="range" id="play-style" min="0" max="100" value="45">
+              <span class="range-labels">
+                <span>Longest time</span>
+                <strong id="play-style-label">Balanced lean: time</strong>
+                <span>Best payout</span>
+              </span>
+            </label>
+
+            <div class="profile-summary" id="profile-summary"></div>
+          </form>
+
+          <section class="recommend-results" aria-label="Recommended games and casinos">
+            <div class="result-header">
+              <div>
+                <p class="eyebrow">Results</p>
+                <h2>Best matches</h2>
+              </div>
+              <span class="snapshot-pill" id="recommend-snapshot"></span>
+            </div>
+
+            <div class="recommend-columns">
+              <div>
+                <h3>Games</h3>
+                <div class="recommend-list" id="game-results" aria-live="polite"></div>
+              </div>
+              <div>
+                <h3>Casinos</h3>
+                <div class="recommend-list" id="casino-results" aria-live="polite"></div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <section class="section-block muted" id="route" aria-labelledby="route-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Run Sheet</p>
-              <h2 id="route-title">Recommendation model</h2>
-            </div>
+      <section class="section-block muted" aria-labelledby="method-title">
+        <div class="section-inner method-grid">
+          <div>
+            <p class="eyebrow">Method</p>
+            <h2 id="method-title">How the matcher scores</h2>
           </div>
-
-          <div class="route-layout">
-            <form class="planner-panel" id="planner-form">
-              <fieldset>
-                <legend>Preference</legend>
-                <label>
-                  <input type="radio" name="profile" value="value" checked>
-                  Lower minimums
-                </label>
-                <label>
-                  <input type="radio" name="profile" value="poker">
-                  Poker depth
-                </label>
-                <label>
-                  <input type="radio" name="profile" value="sportsbook">
-                  Sportsbook quality
-                </label>
-                <label>
-                  <input type="radio" name="profile" value="balanced">
-                  Balanced casino day
-                </label>
-              </fieldset>
-
-              <fieldset>
-                <legend>Trip region</legend>
-                <label>
-                  <input type="checkbox" name="route-region" value="Strip" checked>
-                  Strip
-                </label>
-                <label>
-                  <input type="checkbox" name="route-region" value="Downtown" checked>
-                  Downtown
-                </label>
-                <label>
-                  <input type="checkbox" name="route-region" value="Locals" checked>
-                  Locals
-                </label>
-                <label>
-                  <input type="checkbox" name="route-region" value="Off-Strip" checked>
-                  Off-Strip
-                </label>
-              </fieldset>
-
-              <label class="range-control">
-                <span>Bankroll sensitivity</span>
-                <input type="range" id="bankroll-range" min="1" max="5" value="4">
-              </label>
-            </form>
-
-            <div class="run-sheet" id="run-sheet" aria-live="polite"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-block" aria-labelledby="table-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Game Mix</p>
-              <h2 id="table-title">Public table game counts</h2>
-            </div>
-          </div>
-          <div class="game-grid" id="game-grid"></div>
-        </div>
-      </section>
-
-      <section class="section-block muted" id="sources" aria-labelledby="sources-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Attribution</p>
-              <h2 id="sources-title">Data sources and limits</h2>
-            </div>
-          </div>
-          <div class="source-grid" id="source-grid"></div>
+          <article class="method-card">
+            <h3>Risk fit</h3>
+            <p>Matches games and venues to selected risk tolerance. Low-risk profiles are steered toward lower minimums and longer-session games.</p>
+          </article>
+          <article class="method-card">
+            <h3>Income fit</h3>
+            <p>Uses income as a bankroll sensitivity proxy, favoring lower-minimum properties for lower bands and allowing more premium venues for higher bands.</p>
+          </article>
+          <article class="method-card">
+            <h3>Skill fit</h3>
+            <p>Rewards skill-heavy options such as live poker only when the selected skill level can plausibly support them.</p>
+          </article>
+          <article class="method-card">
+            <h3>Time vs payout</h3>
+            <p>The slider shifts weighting between longer-session characteristics and payout-upside characteristics without presenting guaranteed returns.</p>
+          </article>
         </div>
       </section>
     </main>
@@ -193,8 +152,7 @@
     <footer class="site-footer">
       <div>
         <strong>Responsible play only.</strong>
-        This prototype is for adult trip research and product demonstration. It does not take bets, show live odds,
-        recommend gambling spend, or guarantee game availability.
+        Use this matcher as a planning aid. Decide limits before entering a casino and stop when those limits are reached.
       </div>
       <a href="https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/" target="_blank" rel="noreferrer">
         Problem gambling help: 1-800-GAMBLER
@@ -202,6 +160,7 @@
     </footer>
 
     <script src="src/data.js"></script>
-    <script src="src/app.js"></script>
+    <script src="src/game-profile-content.js"></script>
+    <script src="src/recommend.js"></script>
   </body>
 </html>

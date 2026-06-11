@@ -66,11 +66,8 @@
           <span class="brand-name">Vegas Edge</span>
         </div>
         <nav class="top-nav" aria-label="Sections">
-          <a href="${rootPrefix}index.html">Dashboard</a>
-          <a href="${rootPrefix}recommend.html">Matcher</a>
+          <a href="${rootPrefix}index.html">Matcher</a>
           <a href="${rootPrefix}game-profiles.html" aria-current="page">Game Profiles</a>
-          <a href="${rootPrefix}index.html#explore">Explore</a>
-          <a href="${rootPrefix}index.html#sources">Sources</a>
         </nav>
       </header>
       <main id="main-content">

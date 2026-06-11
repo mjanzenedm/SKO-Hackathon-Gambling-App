@@ -88,7 +88,6 @@ def ensure_app_files() -> None:
         APP_DIR / "game-profiles.html",
         APP_DIR / "styles.css",
         APP_DIR / "src" / "data.js",
-        APP_DIR / "src" / "app.js",
         APP_DIR / "src" / "recommend.js",
         APP_DIR / "src" / "game-profile-content.js",
         APP_DIR / "src" / "game-profile-images.js",
@@ -116,7 +115,6 @@ def ensure_app_files() -> None:
         APP_DIR / "game-profiles" / "baccarat.html",
         APP_DIR / "game-profiles" / "live-poker-cash-games.html",
         APP_DIR / "game-profiles" / "sportsbook-betting.html",
-        APP_DIR / "assets" / "vegas-edge-hero.png",
     ]
     missing = [path for path in required if not path.exists()]
 

@@ -1,16 +1,14 @@
 # Vegas Edge
 
-A static hackathon prototype that uses public VegasAdvantage pages as a seed data source for a Las Vegas casino intelligence dashboard.
+A static hackathon prototype that uses public VegasAdvantage pages as a seed data source for a Las Vegas game-and-casino matcher.
 
 ## What It Does
 
 - Normalizes public VegasAdvantage summaries for blackjack, table games, poker rooms, and sportsbooks.
-- Shows searchable venue cards with visible source backlinks.
-- Builds a simple recommendation run sheet from preference, region, and bankroll-sensitivity inputs.
-- Adds a matcher page that uses risk tolerance, income, skill level, and a longest-time-vs-best-payout slider to suggest games and casinos.
+- Uses risk tolerance, income, skill level, and a longest-time-vs-best-payout slider to suggest games and casinos.
 - Adds a Game Profiles library with individual educational pages for each modeled game.
 - Uses generated PNG game-profile artwork for the Game Profiles index and detail pages.
-- Surfaces data limits, count conflicts, and responsible-gambling boundaries in the UI.
+- Surfaces data limits and responsible-gambling boundaries in the UI.
 
 ## Data Policy
 
@@ -47,17 +45,15 @@ For a hosted demo, any static host can serve the repository root.
 
 ## Files
 
-- `index.html` - application shell
-- `recommend.html` - player profile matcher page
+- `index.html` - player profile matcher homepage
+- `recommend.html` - direct matcher route
 - `game-profiles.html` - index of game profile image links
 - `game-profiles/` - individual profile pages
 - `app.py` - standalone Python launcher for laptop prototyping
 - `styles.css` - responsive UI styling
 - `src/data.js` - public seed data with source references
-- `src/app.js` - filtering, rendering, and recommendation logic
 - `src/recommend.js` - matcher scoring model and result rendering
 - `src/game-profile-content.js` - summary, history, beginner, and advanced profile copy
 - `src/game-profiles.js` - Game Profiles index renderer
 - `src/game-profile-detail.js` - individual game profile renderer
 - `assets/game-profile-previews/` - generated PNG artwork used by the game profile pages
-- `assets/vegas-edge-hero.png` - generated bitmap hero asset
