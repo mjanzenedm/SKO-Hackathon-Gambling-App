@@ -2,6 +2,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "blackjack-32": {
     slug: "blackjack-32",
     title: "3:2 Blackjack",
+    image: "assets/game-profile-previews/blackjack-32.png",
     palette: ["#111111", "#0f766e", "#c98208"],
     summary:
       "3:2 blackjack is a decision-heavy casino card game where correct basic strategy can make the session more efficient than many higher-volatility table games.",
@@ -17,6 +18,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "low-limit-blackjack": {
     slug: "low-limit-blackjack",
     title: "Low-Limit Blackjack",
+    image: "assets/game-profile-previews/low-limit-blackjack.png",
     palette: ["#172554", "#0f766e", "#eab308"],
     summary:
       "Low-limit blackjack is best for players who want table-game structure and longer playing time with smaller individual decisions.",
@@ -32,6 +34,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   craps: {
     slug: "craps",
     title: "Craps",
+    image: "assets/game-profile-previews/craps.png",
     palette: ["#14532d", "#f8fafc", "#dc2626"],
     summary:
       "Craps is a social dice game where conservative line bets can support moderate risk while proposition-heavy betting can raise volatility quickly.",
@@ -47,6 +50,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "pai-gow-poker": {
     slug: "pai-gow-poker",
     title: "Pai Gow Poker",
+    image: "assets/game-profile-previews/pai-gow-poker.png",
     palette: ["#4c1d95", "#f5f3ff", "#f59e0b"],
     summary:
       "Pai Gow Poker is a slower table game that often produces pushes, making it a strong fit for players who prioritize longer sessions.",
@@ -62,6 +66,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "three-card-poker": {
     slug: "three-card-poker",
     title: "Three Card Poker",
+    image: "assets/game-profile-previews/three-card-poker.png",
     palette: ["#7f1d1d", "#fff7ed", "#0f766e"],
     summary:
       "Three Card Poker is a simple, fast table game with approachable rules and higher volatility than slower value-oriented games.",
@@ -77,6 +82,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "ultimate-texas-holdem": {
     slug: "ultimate-texas-holdem",
     title: "Ultimate Texas Hold'em",
+    image: "assets/game-profile-previews/ultimate-texas-holdem.png",
     palette: ["#164e63", "#ecfeff", "#f97316"],
     summary:
       "Ultimate Texas Hold'em is a casino poker table game where early aggressive decisions can create higher upside and higher bankroll swings.",
@@ -92,6 +98,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "roulette-00": {
     slug: "double-zero-roulette",
     title: "Double-Zero Roulette",
+    image: "assets/game-profile-previews/double-zero-roulette.png",
     palette: ["#064e3b", "#fee2e2", "#111111"],
     summary:
       "Double-zero roulette is a chance-driven wheel game that is easy to understand but offers little room for skill-based improvement.",
@@ -107,6 +114,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "roulette-000": {
     slug: "triple-zero-roulette",
     title: "Triple-Zero Roulette",
+    image: "assets/game-profile-previews/triple-zero-roulette.png",
     palette: ["#111827", "#e0f2fe", "#22c55e"],
     summary:
       "Triple-zero roulette is a high-house-edge roulette variant best treated as short-session entertainment rather than a value play.",
@@ -122,6 +130,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   baccarat: {
     slug: "baccarat",
     title: "Baccarat",
+    image: "assets/game-profile-previews/baccarat.png",
     palette: ["#7c2d12", "#fff7ed", "#ca8a04"],
     summary:
       "Baccarat is a low-complexity card game where bet choice matters more than hand-playing skill.",
@@ -137,6 +146,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   "live-poker": {
     slug: "live-poker-cash-games",
     title: "Live Poker Cash Games",
+    image: "assets/game-profile-previews/live-poker-cash-games.png",
     palette: ["#0f172a", "#dcfce7", "#16a34a"],
     summary:
       "Live poker cash games are player-versus-player games where skill, table selection, and discipline matter more than house-banked game selection.",
@@ -152,6 +162,7 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
   sportsbook: {
     slug: "sportsbook-betting",
     title: "Sportsbook Betting",
+    image: "assets/game-profile-previews/sportsbook-betting-v2.png",
     palette: ["#1e293b", "#dbeafe", "#b83280"],
     summary:
       "Sportsbook betting is a high-risk profile where price discipline and bankroll control matter more than picking a favorite team.",

@@ -55,7 +55,9 @@
     }
 
     document.title = `${game.name} - Vegas Edge Game Profile`;
-    const image = window.vegasEdgeGameImage(game, content);
+    const image =
+      (content.image ? `${rootPrefix}${content.image}` : "") ||
+      (window.vegasEdgeGameImage ? window.vegasEdgeGameImage(game, content) : "");
     document.body.innerHTML = `
       <a class="skip-link" href="#main-content">Skip to content</a>
       <header class="site-header" aria-label="Primary">

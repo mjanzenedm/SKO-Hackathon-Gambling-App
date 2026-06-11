@@ -21,7 +21,9 @@
     count.textContent = `${profiles.length} profiles`;
     grid.innerHTML = profiles
       .map(({ game, content }) => {
-        const image = window.vegasEdgeGameImage(game, content);
+        const image =
+          content.image ||
+          (window.vegasEdgeGameImage ? window.vegasEdgeGameImage(game, content) : "");
         return `
           <a class="profile-link-card" href="game-profiles/${content.slug}.html">
             <img src="${image}" alt="${escapeHtml(game.name)} game profile artwork">
