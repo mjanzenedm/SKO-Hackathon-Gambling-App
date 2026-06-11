@@ -319,6 +319,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "aria",
       name: "Aria",
+      publicUrl: "https://aria.mgmresorts.com/en.html",
       region: "Strip",
       categories: ["poker", "sportsbook", "table"],
       tags: ["MGM Resorts", "BetMGM", "Premium poker"],
@@ -333,6 +334,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "bellagio",
       name: "Bellagio",
+      publicUrl: "https://bellagio.mgmresorts.com/en.html",
       region: "Strip",
       categories: ["poker", "sportsbook", "table"],
       tags: ["MGM Resorts", "24-hour poker", "Mixed games"],
@@ -347,6 +349,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "caesars-palace",
       name: "Caesars Palace",
+      publicUrl: "https://www.caesars.com/caesars-palace",
       region: "Strip",
       categories: ["poker", "sportsbook", "table"],
       tags: ["Caesars Sportsbook", "24-hour poker", "Daily tournaments"],
@@ -361,6 +364,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "circa",
       name: "Circa",
+      publicUrl: "https://www.circalasvegas.com/",
       region: "Downtown",
       categories: ["sportsbook", "table"],
       tags: ["Serious action", "24-hour sportsbook", "Downtown"],
@@ -375,6 +379,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "golden-nugget",
       name: "Golden Nugget",
+      publicUrl: "https://www.goldennugget.com/las-vegas/",
       region: "Downtown",
       categories: ["poker", "sportsbook", "table"],
       tags: ["Downtown poker", "IGT sportsbook", "Cash games"],
@@ -389,6 +394,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "orleans",
       name: "The Orleans",
+      publicUrl: "https://orleans.boydgaming.com/",
       region: "Off-Strip",
       categories: ["poker", "blackjack", "table", "low-limit"],
       tags: ["24-hour poker", "Wide cash mix", "Locals value"],
@@ -403,6 +409,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "south-point",
       name: "South Point",
+      publicUrl: "https://southpointcasino.com/",
       region: "Locals",
       categories: ["poker", "sportsbook", "table", "low-limit"],
       tags: ["24-hour poker", "24-hour sportsbook", "Decent action"],
@@ -417,6 +424,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "red-rock",
       name: "Red Rock Resort",
+      publicUrl: "https://www.redrockresort.com/",
       region: "Locals",
       categories: ["poker", "sportsbook", "table", "low-limit"],
       tags: ["Station Casinos", "Summerlin", "Tournaments"],
@@ -431,6 +439,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "green-valley-ranch",
       name: "Green Valley Ranch",
+      publicUrl: "https://www.greenvalleyranch.com/",
       region: "Locals",
       categories: ["poker", "sportsbook", "table", "low-limit"],
       tags: ["Station Casinos", "Henderson", "Reopened poker"],
@@ -445,6 +454,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "westgate",
       name: "Westgate",
+      publicUrl: "https://www.westgatelasvegas.com/",
       region: "Off-Strip",
       categories: ["poker", "sportsbook"],
       tags: ["High-limit sportsbook", "Poker room", "Near Strip"],
@@ -459,6 +469,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "wynn-encore",
       name: "Wynn / Encore",
+      publicUrl: "https://www.wynnlasvegas.com/",
       region: "Strip",
       categories: ["poker", "sportsbook", "table"],
       tags: ["Luxury sportsbook", "PLO and mixed games", "Tourney series"],
@@ -473,6 +484,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "venetian",
       name: "Venetian",
+      publicUrl: "https://www.venetianlasvegas.com/",
       region: "Strip",
       categories: ["poker", "blackjack", "table"],
       tags: ["24-hour poker", "Tournament variety", "Easy Blackjack"],
@@ -487,6 +499,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "main-street-station",
       name: "Main Street Station",
+      publicUrl: "https://mainstreet.boydgaming.com/",
       region: "Downtown",
       categories: ["table", "low-limit"],
       tags: ["Craps odds", "Weekend tables", "Downtown"],
@@ -501,6 +514,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "rio",
       name: "Rio",
+      publicUrl: "https://www.riolasvegas.com/",
       region: "Off-Strip",
       categories: ["table", "low-limit"],
       tags: ["Low craps", "Off-Strip", "Value flag"],
@@ -512,6 +526,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "downtown-grand",
       name: "Downtown Grand",
+      publicUrl: "https://www.downtowngrand.com/",
       region: "Downtown",
       categories: ["blackjack", "sportsbook", "low-limit"],
       tags: ["Low blackjack", "Caesars Sportsbook", "Downtown"],
@@ -526,6 +541,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "oyo",
       name: "Oyo Casino",
+      publicUrl: "https://www.oyolasvegas.com/",
       region: "Off-Strip",
       categories: ["blackjack", "low-limit"],
       tags: ["Low blackjack", "Off-Strip", "Budget signal"],
@@ -537,6 +553,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "binions",
       name: "Binion's",
+      publicUrl: "https://www.binions.com/",
       region: "Downtown",
       categories: ["blackjack", "sportsbook"],
       tags: ["Downtown", "William Hill", "3:2 caution"],
@@ -551,6 +568,7 @@ window.VEGAS_EDGE_DATA = {
     {
       id: "circus-circus",
       name: "Circus Circus",
+      publicUrl: "https://www.circuscircus.com/",
       region: "Strip",
       categories: ["blackjack", "sportsbook"],
       tags: ["North Strip", "William Hill", "3:2 caution"],

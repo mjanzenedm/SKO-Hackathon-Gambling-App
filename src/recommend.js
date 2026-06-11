@@ -160,11 +160,18 @@
 
   function renderVenueCard(venue, rank, currentProfile) {
     const reason = venue.highlights[0] || venue.cautions[0];
+    const titleContent = `
+      <span class="rank-pill">#${rank}</span>
+      <h3>${venue.name}</h3>
+    `;
+    const titleMarkup = venue.publicUrl
+      ? `<a class="match-title-link" href="${venue.publicUrl}" target="_blank" rel="noreferrer" aria-label="Open ${venue.name} public website">${titleContent}</a>`
+      : `<div class="match-title-link">${titleContent}</div>`;
+
     return `
       <article class="match-card">
         <div class="match-card-top">
-          <span class="rank-pill">#${rank}</span>
-          <h3>${venue.name}</h3>
+          ${titleMarkup}
         </div>
         <p>${reason}</p>
         <div class="score-row">
