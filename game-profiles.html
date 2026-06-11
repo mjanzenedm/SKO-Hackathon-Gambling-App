@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vegas Edge Game Profiles</title>
+    <meta
+      name="description"
+      content="Educational game profiles for the Vegas Edge prototype, with summaries, history, beginner hints, and advanced strategy concepts."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary">
+      <div class="brand-lockup" aria-label="Vegas Edge">
+        <span class="brand-mark" aria-hidden="true">VE</span>
+        <span class="brand-name">Vegas Edge</span>
+      </div>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Dashboard</a>
+        <a href="recommend.html">Matcher</a>
+        <a href="game-profiles.html" aria-current="page">Game Profiles</a>
+        <a href="index.html#explore">Explore</a>
+        <a href="index.html#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="profile-index-hero" aria-labelledby="profiles-title">
+        <div class="section-inner profile-index-hero-inner">
+          <div>
+            <p class="eyebrow">Game Library</p>
+            <h1 id="profiles-title">Game Profiles</h1>
+            <p class="hero-copy">
+              Each profile explains how the game fits into the recommendation model, where the game came from,
+              and what beginners and experienced players should think about before sitting down.
+            </p>
+          </div>
+          <div class="snapshot-card">
+            <strong>Educational only</strong>
+            <p>
+              These profiles explain risk, rules, and session-management concepts. They do not guarantee payouts,
+              predict outcomes, or replace current rule checks at the casino.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="profile-grid-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Browse</p>
+              <h2 id="profile-grid-title">Choose a game profile</h2>
+            </div>
+            <span class="snapshot-pill" id="profile-count"></span>
+          </div>
+          <div class="profile-link-grid" id="game-profile-grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Responsible play only.</strong>
+        Use game profiles to understand rules and risk before deciding whether to play.
+      </div>
+      <a href="https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/" target="_blank" rel="noreferrer">
+        Problem gambling help: 1-800-GAMBLER
+      </a>
+    </footer>
+
+    <script src="src/data.js"></script>
+    <script src="src/game-profile-content.js"></script>
+    <script src="src/game-profile-images.js"></script>
+    <script src="src/game-profiles.js"></script>
+  </body>
+</html>

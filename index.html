@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vegas Edge - VegasAdvantage Intelligence</title>
+    <meta
+      name="description"
+      content="A hackathon prototype that turns public VegasAdvantage casino, table game, poker room, and sportsbook data into a responsible Las Vegas gambling intelligence dashboard."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary">
+      <div class="brand-lockup" aria-label="Vegas Edge">
+        <span class="brand-mark" aria-hidden="true">VE</span>
+        <span class="brand-name">Vegas Edge</span>
+      </div>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="#dashboard">Dashboard</a>
+        <a href="recommend.html">Matcher</a>
+        <a href="game-profiles.html">Game Profiles</a>
+        <a href="#explore">Explore</a>
+        <a href="#route">Run Sheet</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="dashboard" aria-labelledby="hero-title">
+        <picture class="hero-media">
+          <img src="assets/vegas-edge-hero.png" alt="Casino analytics dashboard concept with Las Vegas-inspired lights">
+        </picture>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Public VegasAdvantage snapshot</p>
+          <h1 id="hero-title">Casino intelligence for value-focused Las Vegas planning</h1>
+          <p class="hero-copy">
+            Public survey summaries, poker room notes, and sportsbook operator coverage are normalized into a
+            searchable hackathon dashboard with visible attribution and risk flags.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#explore">Explore records</a>
+            <a class="button secondary" href="#sources">Review data policy</a>
+          </div>
+        </div>
+        <div class="hero-strip" aria-label="Data scope">
+          <span>21+ information only</span>
+          <span>No wagering or odds placement</span>
+          <span>Backlinks included</span>
+        </div>
+      </section>
+
+      <section class="status-band" aria-label="Market summary">
+        <div class="section-inner metrics-grid" id="metrics-grid"></div>
+      </section>
+
+      <section class="section-block" id="explore" aria-labelledby="explore-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Explorer</p>
+              <h2 id="explore-title">Venue and category signals</h2>
+            </div>
+            <div class="snapshot-pill" id="snapshot-pill"></div>
+          </div>
+
+          <div class="toolbar" aria-label="Filters">
+            <label class="search-control">
+              <span>Search</span>
+              <input type="search" id="search-input" placeholder="Casino, game, operator">
+            </label>
+            <label class="select-control">
+              <span>Region</span>
+              <select id="region-select">
+                <option value="all">All regions</option>
+                <option value="Strip">Strip</option>
+                <option value="Downtown">Downtown</option>
+                <option value="Locals">Locals</option>
+                <option value="Off-Strip">Off-Strip</option>
+              </select>
+            </label>
+            <div class="segment-control" role="group" aria-label="Category">
+              <button type="button" class="segment is-active" data-category="all">All</button>
+              <button type="button" class="segment" data-category="blackjack">Blackjack</button>
+              <button type="button" class="segment" data-category="table">Tables</button>
+              <button type="button" class="segment" data-category="poker">Poker</button>
+              <button type="button" class="segment" data-category="sportsbook">Sportsbooks</button>
+              <button type="button" class="segment" data-category="low-limit">Low limit</button>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <div class="record-list" id="record-list" aria-live="polite"></div>
+            <aside class="insight-panel" aria-labelledby="insights-title">
+              <h3 id="insights-title">Market watch</h3>
+              <div id="market-signals"></div>
+              <div class="data-alerts" id="data-alerts"></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block muted" id="route" aria-labelledby="route-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Run Sheet</p>
+              <h2 id="route-title">Recommendation model</h2>
+            </div>
+          </div>
+
+          <div class="route-layout">
+            <form class="planner-panel" id="planner-form">
+              <fieldset>
+                <legend>Preference</legend>
+                <label>
+                  <input type="radio" name="profile" value="value" checked>
+                  Lower minimums
+                </label>
+                <label>
+                  <input type="radio" name="profile" value="poker">
+                  Poker depth
+                </label>
+                <label>
+                  <input type="radio" name="profile" value="sportsbook">
+                  Sportsbook quality
+                </label>
+                <label>
+                  <input type="radio" name="profile" value="balanced">
+                  Balanced casino day
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Trip region</legend>
+                <label>
+                  <input type="checkbox" name="route-region" value="Strip" checked>
+                  Strip
+                </label>
+                <label>
+                  <input type="checkbox" name="route-region" value="Downtown" checked>
+                  Downtown
+                </label>
+                <label>
+                  <input type="checkbox" name="route-region" value="Locals" checked>
+                  Locals
+                </label>
+                <label>
+                  <input type="checkbox" name="route-region" value="Off-Strip" checked>
+                  Off-Strip
+                </label>
+              </fieldset>
+
+              <label class="range-control">
+                <span>Bankroll sensitivity</span>
+                <input type="range" id="bankroll-range" min="1" max="5" value="4">
+              </label>
+            </form>
+
+            <div class="run-sheet" id="run-sheet" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="table-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Game Mix</p>
+              <h2 id="table-title">Public table game counts</h2>
+            </div>
+          </div>
+          <div class="game-grid" id="game-grid"></div>
+        </div>
+      </section>
+
+      <section class="section-block muted" id="sources" aria-labelledby="sources-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Attribution</p>
+              <h2 id="sources-title">Data sources and limits</h2>
+            </div>
+          </div>
+          <div class="source-grid" id="source-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Responsible play only.</strong>
+        This prototype is for adult trip research and product demonstration. It does not take bets, show live odds,
+        recommend gambling spend, or guarantee game availability.
+      </div>
+      <a href="https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/" target="_blank" rel="noreferrer">
+        Problem gambling help: 1-800-GAMBLER
+      </a>
+    </footer>
+
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>

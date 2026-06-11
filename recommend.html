@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vegas Edge Matcher - Game and Casino Recommendations</title>
+    <meta
+      name="description"
+      content="Match risk tolerance, income, skill level, and play style to public VegasAdvantage-derived game and casino recommendations."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary">
+      <div class="brand-lockup" aria-label="Vegas Edge">
+        <span class="brand-mark" aria-hidden="true">VE</span>
+        <span class="brand-name">Vegas Edge</span>
+      </div>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Dashboard</a>
+        <a href="recommend.html" aria-current="page">Matcher</a>
+        <a href="game-profiles.html">Game Profiles</a>
+        <a href="index.html#explore">Explore</a>
+        <a href="index.html#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="matcher-hero" aria-labelledby="matcher-title">
+        <div class="section-inner matcher-hero-inner">
+          <div>
+            <p class="eyebrow">Recommendation Lab</p>
+            <h1 id="matcher-title">Find the best games and casinos for your play profile</h1>
+            <p class="hero-copy">
+              This page scores public VegasAdvantage-derived game and venue signals against your risk tolerance,
+              income band, skill level, and whether you care more about longer play time or stronger payout upside.
+            </p>
+          </div>
+          <div class="snapshot-card">
+            <strong>Data boundary</strong>
+            <p>
+              Results are planning suggestions from public summaries. They are not betting advice, live odds,
+              expected-value guarantees, or instructions to gamble.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="profile-title">
+        <div class="section-inner matcher-layout">
+          <form class="recommend-form" id="recommend-form">
+            <div class="section-heading compact-heading">
+              <div>
+                <p class="eyebrow">Inputs</p>
+                <h2 id="profile-title">Player profile</h2>
+              </div>
+            </div>
+
+            <label class="select-control">
+              <span>Risk Tolerance</span>
+              <select id="risk-tolerance">
+                <option value="1">Very low</option>
+                <option value="2">Low</option>
+                <option value="3" selected>Moderate</option>
+                <option value="4">High</option>
+                <option value="5">Very high</option>
+              </select>
+            </label>
+
+            <label class="select-control">
+              <span>Income</span>
+              <select id="income">
+                <option value="1">Under $50k</option>
+                <option value="2" selected>$50k-$100k</option>
+                <option value="3">$100k-$200k</option>
+                <option value="4">$200k+</option>
+              </select>
+            </label>
+
+            <label class="select-control">
+              <span>Skill Level</span>
+              <select id="skill-level">
+                <option value="1">Beginner</option>
+                <option value="2">Casual</option>
+                <option value="3" selected>Intermediate</option>
+                <option value="4">Advanced</option>
+                <option value="5">Expert</option>
+              </select>
+            </label>
+
+            <label class="range-control">
+              <span class="range-title">Playing for the Longest Time vs Best Payout</span>
+              <input type="range" id="play-style" min="0" max="100" value="45">
+              <span class="range-labels">
+                <span>Longest time</span>
+                <strong id="play-style-label">Balanced lean: time</strong>
+                <span>Best payout</span>
+              </span>
+            </label>
+
+            <div class="profile-summary" id="profile-summary"></div>
+          </form>
+
+          <section class="recommend-results" aria-label="Recommended games and casinos">
+            <div class="result-header">
+              <div>
+                <p class="eyebrow">Results</p>
+                <h2>Best matches</h2>
+              </div>
+              <span class="snapshot-pill" id="recommend-snapshot"></span>
+            </div>
+
+            <div class="recommend-columns">
+              <div>
+                <h3>Games</h3>
+                <div class="recommend-list" id="game-results" aria-live="polite"></div>
+              </div>
+              <div>
+                <h3>Casinos</h3>
+                <div class="recommend-list" id="casino-results" aria-live="polite"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-block muted" aria-labelledby="method-title">
+        <div class="section-inner method-grid">
+          <div>
+            <p class="eyebrow">Method</p>
+            <h2 id="method-title">How the matcher scores</h2>
+          </div>
+          <article class="method-card">
+            <h3>Risk fit</h3>
+            <p>Matches games and venues to selected risk tolerance. Low-risk profiles are steered toward lower minimums and longer-session games.</p>
+          </article>
+          <article class="method-card">
+            <h3>Income fit</h3>
+            <p>Uses income as a bankroll sensitivity proxy, favoring lower-minimum properties for lower bands and allowing more premium venues for higher bands.</p>
+          </article>
+          <article class="method-card">
+            <h3>Skill fit</h3>
+            <p>Rewards skill-heavy options such as live poker only when the selected skill level can plausibly support them.</p>
+          </article>
+          <article class="method-card">
+            <h3>Time vs payout</h3>
+            <p>The slider shifts weighting between longer-session characteristics and payout-upside characteristics without presenting guaranteed returns.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Responsible play only.</strong>
+        Use this matcher as a planning aid. Decide limits before entering a casino and stop when those limits are reached.
+      </div>
+      <a href="https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/" target="_blank" rel="noreferrer">
+        Problem gambling help: 1-800-GAMBLER
+      </a>
+    </footer>
+
+    <script src="src/data.js"></script>
+    <script src="src/recommend.js"></script>
+  </body>
+</html>
