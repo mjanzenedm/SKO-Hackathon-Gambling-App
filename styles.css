@@ -889,6 +889,25 @@ input[type="range"] {
   gap: 10px;
 }
 
+.match-title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.match-title-link:hover h3,
+.match-title-link:focus-visible h3 {
+  color: var(--teal);
+}
+
+.match-title-link:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.28);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 .match-card h3 {
   margin: 0;
   font-size: 1.22rem;

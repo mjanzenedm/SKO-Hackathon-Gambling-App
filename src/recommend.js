@@ -1,5 +1,6 @@
 (function () {
   const data = window.VEGAS_EDGE_DATA;
+  const contentById = window.VEGAS_GAME_PROFILE_CONTENT || {};
   const sourceById = Object.fromEntries(data.sources.map((source) => [source.id, source]));
 
   const controls = {
@@ -130,11 +131,16 @@
   }
 
   function renderGameCard(game, rank, currentProfile) {
+    const content = contentById[game.id];
+    const profileUrl = content ? `game-profiles/${content.slug}.html` : "game-profiles.html";
+
     return `
       <article class="match-card">
         <div class="match-card-top">
-          <span class="rank-pill">#${rank}</span>
-          <h3>${game.name}</h3>
+          <a class="match-title-link" href="${profileUrl}" aria-label="Open ${game.name} game profile">
+            <span class="rank-pill">#${rank}</span>
+            <h3>${game.name}</h3>
+          </a>
         </div>
         <p>${game.summary}</p>
         <div class="score-row">
