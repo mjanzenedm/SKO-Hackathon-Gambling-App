@@ -1089,6 +1089,75 @@ input[type="range"] {
   margin-top: 14px;
 }
 
+.strategy-section {
+  display: grid;
+  gap: 18px;
+}
+
+.strategy-section > .eyebrow {
+  margin-bottom: -8px;
+}
+
+.strategy-block {
+  display: grid;
+  gap: 8px;
+}
+
+.strategy-block h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.strategy-block ol,
+.strategy-block ul {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.strategy-block li + li {
+  margin-top: 8px;
+}
+
+.strategy-source-block ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.strategy-source-block li {
+  display: grid;
+  gap: 4px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.strategy-source-block li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.strategy-source-block a {
+  color: var(--teal);
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.strategy-source-block span {
+  color: var(--ink-soft);
+}
+
+.strategy-responsible-note {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .lead-sentence {
   color: var(--ink);
   font-size: 1.18rem;

@@ -36,6 +36,65 @@
     `;
   }
 
+  function listItems(items) {
+    return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  }
+
+  function strategySources(sources) {
+    return sources
+      .map(
+        (source) => `
+          <li>
+            <a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a>
+            <span>${escapeHtml(source.note)}</span>
+          </li>
+        `
+      )
+      .join("");
+  }
+
+  function strategySection(strategy) {
+    if (!strategy) {
+      return "";
+    }
+
+    return `
+      <section class="strategy-section">
+        <p class="eyebrow">Data-Based Strategy</p>
+        <h2>${escapeHtml(strategy.name)}</h2>
+        <div class="strategy-block">
+          <h3>Best Strategy</h3>
+          <p>${escapeHtml(strategy.bestStrategy)}</p>
+        </div>
+        <div class="strategy-block">
+          <h3>How To Use It</h3>
+          <ol>${listItems(strategy.howToUse)}</ol>
+        </div>
+        <div class="strategy-block">
+          <h3>Avoid</h3>
+          <ul>${listItems(strategy.avoid)}</ul>
+        </div>
+        <div class="strategy-block">
+          <h3>Why It Works</h3>
+          <p>${escapeHtml(strategy.whyItWorks)}</p>
+        </div>
+        ${
+          strategy.advancedNote
+            ? `<div class="strategy-block"><h3>Advanced Note</h3><p>${escapeHtml(strategy.advancedNote)}</p></div>`
+            : ""
+        }
+        <div class="strategy-block strategy-source-block">
+          <h3>Sources</h3>
+          <ul>${strategySources(strategy.sources)}</ul>
+        </div>
+        <p class="strategy-responsible-note">
+          Strategy can reduce disadvantage or improve decision quality, but it does not guarantee winning.
+          Set limits before playing, never chase losses, and use help resources if gambling stops being recreational.
+        </p>
+      </section>
+    `;
+  }
+
   function renderMissing() {
     document.body.innerHTML = `
       <main class="section-block">
@@ -103,6 +162,7 @@
                 <p>${escapeHtml(content.advancedStrategies[0])}</p>
                 <p>${escapeHtml(content.advancedStrategies[1])}</p>
               </section>
+              ${strategySection(content.strategy)}
             </article>
 
             <aside class="profile-facts">

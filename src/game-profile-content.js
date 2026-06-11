@@ -13,7 +13,45 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced blackjack selection starts before the first hand: compare dealer stands or hits soft 17, double-after-split rules, surrender availability, deck count, penetration, and whether mid-shoe entry is allowed. The goal is not to chase a single feature, but to identify a complete rule set that keeps the house edge lower while matching your bankroll and session goals.",
       "Serious advantage play requires disciplined counting, bet spreads, cover decisions, and tolerance for casino countermeasures, so this prototype treats it as educational rather than a recommendation. For most players, the practical advanced edge is rule selection, perfect basic strategy, strict session limits, and leaving tables whose rules or pace no longer match the plan."
-    ]
+    ],
+    strategy: {
+      name: "Basic Strategy First, Counting Only as Advanced Study",
+      bestStrategy:
+        "Play favorable 3:2 tables when available, use a rule-correct basic strategy chart for every decision, and treat card counting as an advanced discipline rather than a casual shortcut.",
+      howToUse: [
+        "Confirm the table pays 3:2 on blackjack before you sit down; skip 6:5 when a playable 3:2 table is available.",
+        "Use a basic strategy chart that matches the table rules, especially deck count, dealer soft-17 rule, doubling, splitting, and surrender.",
+        "Make the chart decision every hand before considering hunches, streaks, or table talk.",
+        "Keep bet sizing fixed unless you have trained, tested, and bankroll-supported advantage-play reasons to vary it."
+      ],
+      avoid: [
+        "6:5 blackjack when comparable 3:2 games are available.",
+        "Routine insurance or even-money decisions as a casual player.",
+        "Changing hit, stand, double, or split decisions because a hand feels due.",
+        "Treating card counting as easy guaranteed profit."
+      ],
+      whyItWorks:
+        "Basic strategy is the expected-value-minimizing decision set for the rules in front of you. A 6:5 payout materially worsens the game compared with 3:2, while counting can shift edge only when the count, bet spread, rules, penetration, and discipline all line up.",
+      advancedNote:
+        "Card counting tracks whether the remaining shoe is richer in high cards or low cards. High-card-rich shoes can improve blackjacks, doubles, splits, and dealer bust frequency, but real use requires accurate running and true counts, practice, bankroll depth, and awareness that casinos may shuffle early, limit action, back off, or bar counters.",
+      sources: [
+        {
+          label: "Wizard of Odds: Blackjack Basic Strategy",
+          url: "https://wizardofodds.com/games/blackjack/strategy/calculator/",
+          note: "Strategy calculator and rule-sensitive basic strategy reference."
+        },
+        {
+          label: "Wizard of Odds: High-Low Card Counting",
+          url: "https://wizardofodds.com/games/blackjack/card-counting/high-low/",
+          note: "Explains how high-low counting changes decisions and why execution discipline matters."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Blackjack",
+          url: "https://vegasadvantage.com/las-vegas-blackjack/",
+          note: "Used for public Las Vegas blackjack rule and availability context."
+        }
+      ]
+    }
   },
   "low-limit-blackjack": {
     slug: "low-limit-blackjack",
@@ -29,7 +67,40 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "The advanced low-limit skill is comparing total cost of play instead of only looking at the posted minimum. A $5 table with poor rules can be worse than a slightly higher table with a better payout, better double rules, and a slower pace.",
       "Use low-limit games for skill repetition and bankroll control, especially when learning count-neutral discipline such as not chasing losses. If the table becomes crowded, too fast, or pushes side bets aggressively, the time-value advantage of the low minimum can disappear."
-    ]
+    ],
+    strategy: {
+      name: "Basic Strategy Plus Rule Screening",
+      bestStrategy:
+        "Use basic strategy, but first screen the table for rules that keep the low minimum from becoming a bad mathematical tradeoff.",
+      howToUse: [
+        "Look for 3:2 blackjack before choosing a low-limit seat; a cheap 6:5 table can cost more over time than a slightly higher 3:2 game.",
+        "Check whether doubling after splits, surrender, and reasonable split rules are available.",
+        "Use a simple basic strategy chart for every decision and keep the same small base bet while learning.",
+        "Leave if the table relies on side-bet pressure, fast pace, or poor rules that defeat the purpose of low-limit play."
+      ],
+      avoid: [
+        "Assuming low minimum automatically means good value.",
+        "6:5 payouts when 3:2 alternatives exist.",
+        "Side bets, insurance, and progressive betting after losses.",
+        "Overbuying chips just because the posted minimum is small."
+      ],
+      whyItWorks:
+        "Low-limit play helps session length only if the rule set is not giving too much value back to the house. Basic strategy reduces avoidable decision errors, while avoiding 6:5 and weak rules protects the biggest controllable parts of blackjack expected value.",
+      advancedNote:
+        "Card counting is possible only with enough penetration, rule quality, skill, and bankroll; at many low-limit tables, poor rules or crowded conditions can erase the practical value before a casual player has an edge.",
+      sources: [
+        {
+          label: "Wizard of Odds: Blackjack Basic Strategy",
+          url: "https://wizardofodds.com/games/blackjack/strategy/calculator/",
+          note: "Use a chart matched to the exact table rules."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Blackjack",
+          url: "https://vegasadvantage.com/las-vegas-blackjack/",
+          note: "Public Las Vegas blackjack notes used for low-limit and rule-quality context."
+        }
+      ]
+    }
   },
   craps: {
     slug: "craps",
@@ -45,7 +116,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced craps play is mostly about wager discipline and volatility control. Full odds can reduce the blended house edge on a line-bet package, but they also increase the amount of money exposed on each decision, so the right odds multiple depends on bankroll and session length.",
       "Experienced players should map every bet to a purpose: line bets for lower house edge, place bets for controlled number exposure, and hardways or props only as entertainment costs. Dice-setting claims should not be treated as reliable edge without evidence, so the practical strategy remains bet selection, table minimum selection, and loss-limit enforcement."
-    ]
+    ],
+    strategy: {
+      name: "Pass Line or Don't Pass With Odds",
+      bestStrategy:
+        "Make a pass line or don't pass line bet, then take or lay odds after a point is established instead of spreading money across high-house-edge center bets.",
+      howToUse: [
+        "Choose either pass line or don't pass before the come-out roll and keep the line bet at a size you can repeat calmly.",
+        "After a point is set, add the odds bet only up to a level that still fits your session limit.",
+        "Treat odds as paired with the line bet; it cannot be made by itself and it increases variance.",
+        "Keep the plan simple: line bet, odds, decision, reset."
+      ],
+      avoid: [
+        "Hardways, horn, any seven, and other proposition bets as a default strategy.",
+        "Increasing odds beyond your bankroll comfort just because the odds portion has no house edge.",
+        "Dice-control claims or streak logic as a substitute for bet selection.",
+        "Chasing losses with larger line bets."
+      ],
+      whyItWorks:
+        "Odds bets are paid at true odds, so the odds portion has 0% house edge, while the required line bet still has a house edge. Combining the line bet with odds lowers the blended house edge compared with betting the same total amount on many other craps wagers.",
+      sources: [
+        {
+          label: "Wizard of Odds: Craps House Edge Appendix",
+          url: "https://wizardofodds.com/games/craps/appendix/1/",
+          note: "Shows 0% expected edge on buying and laying odds and higher edges on many proposition bets."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for Las Vegas craps availability and minimum context."
+        }
+      ]
+    }
   },
   "pai-gow-poker": {
     slug: "pai-gow-poker",
@@ -61,7 +163,40 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced hand setting means recognizing when to split pairs, preserve a strong two-card hand, or sacrifice a marginal high hand to avoid losing both sides. Small setting differences matter most on borderline hands, so reviewing common dealer-house-way examples is more useful than memorizing rare edge cases first.",
       "If the table allows player banking, understand the bankroll requirements, commission treatment, and rotation rules before taking it. Side bets can make the game feel more exciting, but they usually change the low-volatility profile that makes Pai Gow Poker attractive in the first place."
-    ]
+    ],
+    strategy: {
+      name: "Correct Hand Setting",
+      bestStrategy:
+        "Set the five-card high hand and two-card low hand according to a reliable house-way-style strategy so both hands are as balanced as possible without fouling the hand.",
+      howToUse: [
+        "Sort the seven cards into the best five-card poker hand and the strongest legal two-card hand that can sit behind it.",
+        "Make sure the five-card high hand always outranks the two-card low hand; otherwise the hand is fouled.",
+        "Use the casino's house way as a baseline for close decisions, especially two pair, three pair, straights, flushes, and full houses.",
+        "If player banking is offered, use it only after you understand the rules, commission, bankroll requirement, and rotation."
+      ],
+      avoid: [
+        "Setting only the strongest possible high hand while leaving the low hand too weak.",
+        "Fouling the hand by making the two-card hand outrank the five-card hand.",
+        "Using side bets as the main plan.",
+        "Banking without enough bankroll or rule knowledge."
+      ],
+      whyItWorks:
+        "Pai Gow Poker is decided by two comparisons, so correct setting improves the chance of winning or pushing both hands instead of accidentally turning a balanced hand into a loss. Banking can improve expectation in some formats, but only when the player understands the exposure and rules.",
+      advancedNote:
+        "Because pushes are common, small setting errors matter over time. The practical edge is reducing avoidable missets, not trying to force action from every seven-card hand.",
+      sources: [
+        {
+          label: "Wizard of Odds: Pai Gow Poker",
+          url: "https://wizardofodds.com/games/pai-gow-poker/",
+          note: "Strategy and house-edge reference for hand setting, banking, and common rule variations."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for Pai Gow Poker availability and minimum context."
+        }
+      ]
+    }
   },
   "three-card-poker": {
     slug: "three-card-poker",
@@ -77,7 +212,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced play is mostly about not giving back value through bad continue/fold decisions. The ante-play decision is simple enough to execute accurately, so the real discipline is avoiding emotional deviations after streaks.",
       "Evaluate pay tables before playing, because bonus payouts can vary by casino and materially affect the game profile. If the goal is longer time, reduce or skip side bets; if the goal is payout-style entertainment, size side bets as a separate entertainment budget rather than as part of a recovery plan."
-    ]
+    ],
+    strategy: {
+      name: "Q-6-4 Ante-Play Threshold",
+      bestStrategy:
+        "Make the Play bet with queen-six-four or better and fold weaker hands, while treating Pair Plus and other side bets as optional entertainment rather than the core strategy.",
+      howToUse: [
+        "Look at the three-card hand before making the Play decision.",
+        "If the hand is Q-6-4 or better, make the Play bet.",
+        "If the hand is worse than Q-6-4, fold and do not add more money to a negative situation.",
+        "Keep the Ante/Play plan separate from any side-bet budget."
+      ],
+      avoid: [
+        "Playing every hand because the rules feel simple.",
+        "Folding qualifying Q-6-4-or-better hands after short-term losses.",
+        "Using Pair Plus or progressive side bets as the main strategy.",
+        "Increasing bet size to recover a folded hand."
+      ],
+      whyItWorks:
+        "The Q-6-4 threshold is the standard expected-value play/fold rule for the Ante/Play decision. It prevents players from adding the Play bet to hands that are too weak while preserving value on hands strong enough to continue.",
+      sources: [
+        {
+          label: "Wizard of Odds: Three Card Poker",
+          url: "https://wizardofodds.com/games/three-card-poker/",
+          note: "Strategy reference for the Q-6-4 play/fold threshold and side-bet math."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for Three Card Poker availability and minimum context."
+        }
+      ]
+    }
   },
   "ultimate-texas-holdem": {
     slug: "ultimate-texas-holdem",
@@ -93,7 +259,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced Ultimate Texas Hold'em strategy focuses on knowing when to use the 4x preflop raise, when to wait, and when to check down weaker holdings. Because the raise multiple shrinks later in the hand, passing up correct early raises can cost more than beginners expect.",
       "Pay attention to table pay schedules, side-bet pressure, and bankroll depth. The game can feel like poker, but the variance pattern is closer to a table game with large decision-based bet sizing, so session limits and side-bet restraint are central to advanced play."
-    ]
+    ],
+    strategy: {
+      name: "Raise Early When Equity Supports It",
+      bestStrategy:
+        "Use the accepted Ultimate Texas Hold'em raise structure: 4x before the flop with strong starting hands, 2x on the flop with sufficient equity, and 1x on the river only with qualifying made hands or accepted strategy bluffs.",
+      howToUse: [
+        "Before the flop, make the 4x raise with strong starting hands from a reliable strategy chart rather than waiting for more cards.",
+        "If you check preflop, use the flop decision to make a 2x raise only when the hand has enough equity against the dealer.",
+        "If you reach the river, make the 1x call with qualifying made hands and chart-supported bluff-catchers; fold hands that do not meet strategy thresholds.",
+        "Keep Trips and other side bets separate from the main strategy or skip them."
+      ],
+      avoid: [
+        "Checking strong preflop hands because a smaller later raise feels safer.",
+        "Calling the river with any pair or high card without using accepted strategy thresholds.",
+        "Making the Trips side bet the default plan.",
+        "Changing raise timing because of recent wins or losses."
+      ],
+      whyItWorks:
+        "Ultimate Texas Hold'em gives the largest raise multiple before all cards are known, so correct early aggression captures value that cannot be recovered later. Most avoidable player loss comes from wrong raise timing, not from reading opponents.",
+      sources: [
+        {
+          label: "Wizard of Odds: Ultimate Texas Hold'em",
+          url: "https://wizardofodds.com/games/ultimate-texas-hold-em/",
+          note: "Strategy and house-edge reference for preflop, flop, and river raise decisions."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for Ultimate Texas Hold'em availability and minimum context."
+        }
+      ]
+    }
   },
   "roulette-00": {
     slug: "double-zero-roulette",
@@ -109,7 +306,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "The advanced move in roulette is table selection, not pattern prediction. A single-zero wheel is usually preferable when available, and a lower minimum can be more useful than a complex progression system.",
       "Experienced players should set a fixed spin budget and avoid escalating after losses. Progression systems can make sessions feel structured, but they do not change the wheel math and can increase the chance of hitting table limits or bankroll limits."
-    ]
+    ],
+    strategy: {
+      name: "Flat Betting Only If You Play",
+      bestStrategy:
+        "Recognize that no betting pattern beats the double-zero wheel; if you play anyway, use small flat bets and prefer lower-edge wheels when available.",
+      howToUse: [
+        "Set a fixed spin budget before the first spin.",
+        "Choose a small flat bet size and keep it unchanged after wins and losses.",
+        "Use outside bets if you want lower volatility, understanding they do not reduce the house edge.",
+        "Move to single-zero or better rules when available instead of trying to overcome double-zero with a system."
+      ],
+      avoid: [
+        "Martingale, Labouchere, Fibonacci, or any other progression system.",
+        "Increasing bets because a color, number, or section feels due.",
+        "Treating previous spins as predictive on a fair wheel.",
+        "Using roulette as a recovery game after losses elsewhere."
+      ],
+      whyItWorks:
+        "Every standard double-zero roulette bet resolves against the same wheel disadvantage over time. Flat betting does not create positive expected value, but it limits the damage from compounding a fixed negative expectation with larger chase bets.",
+      sources: [
+        {
+          label: "Wizard of Odds: Roulette",
+          url: "https://wizardofodds.com/games/roulette/",
+          note: "House-edge reference for roulette wheels and bet types."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for double-zero roulette availability context."
+        }
+      ]
+    }
   },
   "roulette-000": {
     slug: "triple-zero-roulette",
@@ -125,7 +353,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced strategy often means declining the game when your goal is value or longevity. If a group wants the experience anyway, use flat bets and a strict stop point rather than chasing the same result that would be cheaper on another wheel.",
       "Do not let the familiar roulette layout hide the rule difference. The best practical comparison is the number of green pockets, the table minimum, and the session budget, because betting systems do not overcome the added house edge."
-    ]
+    ],
+    strategy: {
+      name: "Avoid Triple-Zero When Better Wheels Exist",
+      bestStrategy:
+        "The best mathematical strategy is to avoid triple-zero roulette when single-zero or double-zero alternatives are available; if you still play, use only small flat entertainment bets.",
+      howToUse: [
+        "Check the wheel layout before buying in and count the green pockets.",
+        "Choose single-zero first, double-zero second, and triple-zero only as a deliberate short-session entertainment choice.",
+        "If playing triple-zero, set a small fixed wager and a firm stop point.",
+        "Leave the table rather than increasing stakes to compensate for the higher house edge."
+      ],
+      avoid: [
+        "Trying to solve triple-zero roulette with a betting system.",
+        "Assuming the third zero is a small cosmetic rule change.",
+        "Chasing back losses after a short run of missed outside bets.",
+        "Comparing only table minimums while ignoring the extra green pocket."
+      ],
+      whyItWorks:
+        "Adding a third zero increases the house edge materially compared with double-zero and single-zero roulette. Avoiding the worse wheel is the only reliable way to improve the math; bet patterns cannot change the wheel probabilities.",
+      sources: [
+        {
+          label: "Wizard of Odds: Roulette",
+          url: "https://wizardofodds.com/games/roulette/",
+          note: "Explains roulette house edge by wheel configuration and why systems do not overcome it."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for triple-zero roulette availability context."
+        }
+      ]
+    }
   },
   baccarat: {
     slug: "baccarat",
@@ -141,7 +400,38 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced baccarat is mostly about table selection, commission structure, and avoiding pattern myths. Scorecards can help players follow the shoe, but they should not be treated as predictive tools for independent outcomes.",
       "Compare traditional commission games with no-commission variants before playing, because alternative payout rules can change the value of banker wins. High-limit atmosphere can also push bet sizing up quickly, so table minimum matters as much as rule familiarity."
-    ]
+    ],
+    strategy: {
+      name: "Banker Bet as the Default",
+      bestStrategy:
+        "Use the Banker bet as the default wager, accept the standard commission as part of the price, and avoid Tie and most side bets.",
+      howToUse: [
+        "Choose Banker as the baseline bet rather than alternating based on scorecard patterns.",
+        "Expect a commission, commonly 5%, on winning Banker bets in traditional baccarat.",
+        "Use flat stakes and stop when the planned session limit is reached.",
+        "If a no-commission table is offered, read the alternative payout rule before assuming it is better."
+      ],
+      avoid: [
+        "Tie bets as a default strategy.",
+        "Dragon, pair, and other side bets unless they are treated as small entertainment costs.",
+        "Pattern betting based on scorecards or streak boards.",
+        "Increasing bet size because Banker or Player feels due."
+      ],
+      whyItWorks:
+        "Under common baccarat rules, Banker has the lowest house edge even after commission because the drawing rules make Banker win slightly more often. Tie and many side bets pay more when they hit but usually carry much higher house edges.",
+      sources: [
+        {
+          label: "Wizard of Odds: Baccarat",
+          url: "https://wizardofodds.com/games/baccarat/",
+          note: "House-edge reference for Banker, Player, Tie, and common baccarat side bets."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Table Game Survey",
+          url: "https://vegasadvantage.com/las-vegas-table-game-survey/",
+          note: "Public source for baccarat availability and minimum context."
+        }
+      ]
+    }
   },
   "live-poker": {
     slug: "live-poker-cash-games",
@@ -157,7 +447,43 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced live poker starts with game selection: table composition, stack depth, rake cap, seat position, and opponent tendencies often matter more than the room's brand name. Moving tables can be a strategic decision, not a sign of impatience.",
       "Build decisions around ranges, position, bet sizing, and emotional control rather than single-hand results. Track sessions honestly, separate poker bankroll from trip money, and avoid moving up in stakes to recover losses."
-    ]
+    ],
+    strategy: {
+      name: "Table Selection Plus Tight-Aggressive Position",
+      bestStrategy:
+        "Choose beatable tables, play tighter ranges from early position, widen intelligently in later position, and apply disciplined aggression against weaker opponents while respecting rake and bankroll limits.",
+      howToUse: [
+        "Before sitting, look for tables with deep enough stacks, weaker opponents, reasonable rake, and seats that give you position on loose players.",
+        "Play fewer hands from early position and more playable hands from the button and cutoff.",
+        "Raise or fold more often than limping, especially when entering first.",
+        "Track results by session, but judge decisions by expected value and opponent tendencies rather than one hand outcome."
+      ],
+      avoid: [
+        "Playing any open seat without considering table quality.",
+        "Chasing losses by moving to higher stakes.",
+        "Calling too many hands out of position.",
+        "Ignoring rake, promotions, and stack depth when judging whether a game is worth playing."
+      ],
+      whyItWorks:
+        "Live poker is not house-banked; the casino takes rake while player results depend on decision quality against other players. Position gives more information before acting, tight-aggressive ranges reduce weak calls, and table selection puts the player in games where skill edge has room to overcome rake.",
+      sources: [
+        {
+          label: "Wizard of Odds: Texas Hold'em Poker",
+          url: "https://wizardofodds.com/games/texas-hold-em/",
+          note: "Poker math and hand-value reference for decision quality."
+        },
+        {
+          label: "Poker Strategy: Position and Aggression",
+          url: "https://en.wikipedia.org/wiki/Poker_strategy",
+          note: "Reference for position, pot odds, aggression, and opponent-based decision concepts."
+        },
+        {
+          label: "VegasAdvantage: Open Las Vegas Poker Rooms",
+          url: "https://vegasadvantage.com/open-las-vegas-poker-rooms/",
+          note: "Public source for Las Vegas poker-room availability and room characteristics."
+        }
+      ]
+    }
   },
   sportsbook: {
     slug: "sportsbook-betting",
@@ -173,6 +499,42 @@ window.VEGAS_GAME_PROFILE_CONTENT = {
     advancedStrategies: [
       "Advanced sportsbook discipline focuses on price, timing, and record keeping. Line shopping, tracking closing-line value, and specializing in markets you understand are more durable habits than chasing picks from social media.",
       "Promotions, limits, and house rules can change the real value of a wager, so read terms carefully and keep unit size consistent. The app does not provide picks or odds; it only identifies operator and venue fit from public source data."
-    ]
+    ],
+    strategy: {
+      name: "Line Shopping and Flat Staking",
+      bestStrategy:
+        "Only bet when your estimated probability is better than the market price, shop for the best available line, and use small flat stakes instead of parlays or chase bets.",
+      howToUse: [
+        "Convert the offered odds into an implied probability before betting.",
+        "Compare that price with your own fair probability estimate and skip the wager if there is no clear value.",
+        "Check multiple legal sportsbooks for the best number before placing a bet.",
+        "Stake a small fixed unit per wager and record the price, stake, result, and closing line."
+      ],
+      avoid: [
+        "Making picks without considering the price.",
+        "Using parlays as the default bet type.",
+        "Increasing stake size after losses.",
+        "Betting games only because you plan to watch them."
+      ],
+      whyItWorks:
+        "Sports betting expected value depends on price as much as prediction. A good opinion at a bad number can be a bad bet, while line shopping can turn the same opinion into a better expected-value position. Flat staking limits variance and prevents loss-chasing from overwhelming any edge.",
+      sources: [
+        {
+          label: "Wizard of Odds: Sports Betting",
+          url: "https://wizardofodds.com/games/sports-betting/",
+          note: "Sports-betting math reference for odds, expected value, and bet pricing."
+        },
+        {
+          label: "Wizard of Odds: Parlay Calculator",
+          url: "https://wizardofodds.com/games/sports-betting/parlay-calculator/",
+          note: "Shows how multiple legs compound payout and probability in parlay betting."
+        },
+        {
+          label: "VegasAdvantage: Las Vegas Sportsbooks",
+          url: "https://vegasadvantage.com/las-vegas-sportsbooks/",
+          note: "Public source for Las Vegas sportsbook operator and venue context."
+        }
+      ]
+    }
   }
 };
